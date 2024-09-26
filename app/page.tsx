@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import confetti from "canvas-confetti";
 import { useSearchParams } from "next/navigation"
 import Image from "next/image";
@@ -8,6 +8,16 @@ import CountDown from "@/components/CountDown/CountDown";
 export default function Home() {
   // const params = useSearchParams();
   // const user = params.get('u');
+
+
+  return (
+    <Suspense fallback={<div>Cargando...</div>}>
+      <HomeComponent />
+    </Suspense>
+  );
+}
+
+const HomeComponent = () => {
   const searchParams = useSearchParams();
   const paramValue = searchParams.get('u');
 
@@ -110,7 +120,6 @@ export default function Home() {
     });
 
   };
-
   const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -164,7 +173,6 @@ export default function Home() {
   useEffect(() => {
     launchConfetti();
   }, []);
-
   return (
     <div className=" flex items-center justify-center">
       <div className="w-full h-full p-5 animate-fade-up animate-duration-2000 animate-delay-500">
@@ -229,5 +237,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }
