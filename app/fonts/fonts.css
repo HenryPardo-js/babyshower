@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Distant Stroke';
+  src: url('./Distant_Stroke.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  src: url('./Fredoka.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AdventPro Medium';
+  src: url('./AdventPro-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Codec-Cold-Thin-trial';
+  src: url('./Codec-Cold-Thin-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aspergit Light';
+  src: url('./Aspergit Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HachiMaruPop-Regular';
+  src: url('./HachiMaruPop-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

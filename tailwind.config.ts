@@ -12,8 +12,18 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'distant': ['Distant Stroke', 'sans-serif'],
+        'fredoka': ['Fredoka', 'sans-serif'],
+        'adventpro': ['AdventPro Medium', 'sans-serif'],
+        'code': ['Codec-Cold-Thin-trial', 'sans-serif'],
+        'asper': ['Aspergit Light', 'sans-serif'],
+        'hachi': ['HachiMaruPop-Regular', 'sans-serif'],
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 };
 export default config;
