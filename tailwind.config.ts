@@ -20,6 +20,7 @@ const config: Config = {
         'asper': ['Aspergit Light', 'sans-serif'],
         'hachi': ['HachiMaruPop-Regular', 'sans-serif'],
         'brother': ['Brotherhood_Script', 'sans-serif'],
+        'ubuntu': ['Ubuntu-Regular', 'sans-serif'],
       },
     },
   },

@@ -49,7 +49,7 @@ function Countdown() {
 
   return (
     <div className="flex items-center justify-center flex-col space-y-4 mt-8">
-      <h1 className="text-2xl font-fredoka  ">Falta muy poquito para la fecha 🥳</h1>
+      <h1 className="text-2xl font-fredoka text-center  ">Falta muy poquito para la fecha 🥳</h1>
       <div className="sm:flex sm:space-x-4 grid grid-cols-2 gap-4   text-center">
         <div className="p-4 bg-[#F7C5A4] text-white rounded-lg">
           <p className="text-4xl font-bold">{timeLeft.days}</p>

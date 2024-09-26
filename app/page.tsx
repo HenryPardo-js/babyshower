@@ -188,7 +188,7 @@ const HomeComponent = () => {
                 <span className="text-[#2a2b2a] font-fredoka sm:text-xl text-lg text-center ">
                   Hola {capitalizeFirstLetter(paramValue || '')}! te invitamos a celebrar con nosotros el
                 </span>
-                <h1 className="text-[#628cca] font-distant sm:text-9xl text-7xl animate-fade-up animate-duration-1000 animate-delay-500">
+                <h1 className="text-[#628cca] font-distant sm:text-9xl text-8xl font-bold animate-fade-up animate-duration-1000 animate-delay-500">
                   Baby Shower
                 </h1>
                 <span className="text-[#2a2b2a] font-fredoka sm:text-xl text-lg text-center">
@@ -196,14 +196,14 @@ const HomeComponent = () => {
                 </span>
               </div>
               <div className="flex flex-col sm:items-end items-center gap-2 sm:mt-4 mt-0 px-0 sm:px-10">
-                <span className="sm:text-xl text-base font-hachi sm:text-right text-center">{`"Antes de darte la vida, ya te había yo escogido; antes de que nacieras, ya te había yo apartado; te había destinado a ser profeta de las naciones"`}</span>
+                <span className="sm:text-xl text-base font-fredoka sm:text-right text-center">{`"Antes de darte la vida, ya te había yo escogido; antes de que nacieras, ya te había yo apartado; te había destinado a ser profeta de las naciones"`}</span>
                 <span className="text-xl font-fredoka">{`Jeremías 1:5`}</span>
               </div>
               <div className="flex flex-col gap-1 sm:mt-5 mt-0  justify-center items-center w-full animate-jump-in animate-duration-2000 animate-delay-500">
-                <div className="relative flex items-center gap-10 justify-center border-dotted border-[#B78256] border-2 sm:border-none rounded-lg py-1 px-5 sm:bg-none bg-opacity-5 sm:backdrop-filter-none backdrop-blur-md before:absolute before:inset-0 before:bg-white/20 before:backdrop-blur-lg before:rounded-lg sm:before:hidden">
-                  <span className="relative text-[#B78256] font-hachi text-xl sm:text-3xl">{`SÁBADO`}</span>
+                <div className="relative flex items-center gap-10 justify-center border-dotted border-[#B78256] border-4 sm:border-none rounded-lg py-1 px-5 sm:bg-none bg-opacity-5 sm:backdrop-filter-none backdrop-blur-md before:absolute before:inset-0 before:bg-white/20 before:backdrop-blur-lg before:rounded-lg sm:before:hidden">
+                  <span className="relative text-[#B78256] font-ubuntu text-xl sm:text-3xl">{`SÁBADO`}</span>
                   <div className="relative h-6 w-px bg-[#B78256]"></div>
-                  <span className="relative text-[#B78256] font-hachi text-xl sm:text-3xl">{`05 Oct 15:00`}</span>
+                  <span className="relative text-[#B78256] font-ubuntu text-xl sm:text-3xl">{`05 Oct 15:00`}</span>
                 </div>
 
 
@@ -224,13 +224,15 @@ const HomeComponent = () => {
               <div className="flex justify-center items-center">
                 <CountDown />
               </div>
-              <div className="flex flex-col gap-4  border-dotted border-[#B78256] border-2 bg-white  rounded-lg  bg-opacity-15 sm:px-0 sm:py-0 py-5  " >
-                <span className="text-[#2a2b2a] font-fredoka text-2xl sm:text-xl text-center" >¿Dónde va a ser? 🤔</span>
-                <span className="text-[#2a2b2a] font-fredoka text-2xl sm:text-xl text-center" >{`Dirección `}🪧 </span>
-                <span className="text-[#2a2b2a] font-fredoka text-xl sm:text-xl text-center" >David Carmona y Rafael Flores, esquina.</span>
-                <button onClick={() => handleViewMaps(location?.latitude.toString() || '', location?.longitude.toString() || '')} className="flex justify-center px-10 py-2 rounded-lg bg-[#EF763E] text-white font-hachi text-center text-xl mx-5 " >
-                  Ver ubicación ahora!
-                </button>
+              <div className="px-10 flex justify-center items-center">
+                <div className="flex flex-col gap-4 sm:p-5  border-dotted border-[#B78256] border-2 bg-white  rounded-lg  bg-opacity-15 py-5  " >
+                  <span className="text-[#2a2b2a] font-fredoka text-2xl sm:text-xl text-center" >¿Dónde va a ser? 🤔</span>
+                  <span className="text-[#2a2b2a] font-fredoka text-2xl sm:text-xl text-center" >{`Dirección `}🪧 </span>
+                  <span className="text-[#2a2b2a] font-fredoka text-xl sm:text-xl text-center" >David Carmona y Rafael Flores, esquina.</span>
+                  <button onClick={() => handleViewMaps(location?.latitude.toString() || '', location?.longitude.toString() || '')} className="flex justify-center px-10 py-2 rounded-lg bg-[#EF763E] text-white font-ubuntu text-center text-xl mx-5 " >
+                    Ver ubicación ahora!
+                  </button>
+                </div>
               </div>
             </div>
           </div>
