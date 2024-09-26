@@ -227,7 +227,7 @@ const HomeComponent = () => {
               <div className="flex flex-col gap-4  border-dotted border-[#B78256] border-2 bg-white  rounded-lg  bg-opacity-15 sm:px-0 sm:py-0 py-5  " >
                 <span className="text-[#2a2b2a] font-fredoka text-2xl sm:text-xl text-center" >¿Dónde va a ser? 🤔</span>
                 <span className="text-[#2a2b2a] font-fredoka text-2xl sm:text-xl text-center" >{`Dirección `}🪧 </span>
-                <span className="text-[#2a2b2a] font-fredoka text-xl sm:text-xl text-center" >David Carmona entre Rafael Flores y Municipalidad</span>
+                <span className="text-[#2a2b2a] font-fredoka text-xl sm:text-xl text-center" >David Carmona y Rafael Flores, esquina.</span>
                 <button onClick={() => handleViewMaps(location?.latitude.toString() || '', location?.longitude.toString() || '')} className="flex justify-center px-10 py-2 rounded-lg bg-[#EF763E] text-white font-hachi text-center text-xl mx-5 " >
                   Ver ubicación ahora!
                 </button>
