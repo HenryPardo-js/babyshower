@@ -188,7 +188,7 @@ const HomeComponent = () => {
                 <span className="text-[#2a2b2a] font-fredoka sm:text-xl text-lg text-center ">
                   Hola {capitalizeFirstLetter(paramValue || '')}! te invitamos a celebrar con nosotros el
                 </span>
-                <h1 className="text-[#628cca] font-distant sm:text-9xl text-8xl font-bold animate-fade-up animate-duration-1000 animate-delay-500">
+                <h1 className="text-[#628cca] font-distant sm:text-9xl text-8xl font-bold sm:font-normal animate-fade-up animate-duration-1000 animate-delay-500">
                   Baby Shower
                 </h1>
                 <span className="text-[#2a2b2a] font-fredoka sm:text-xl text-lg text-center">
