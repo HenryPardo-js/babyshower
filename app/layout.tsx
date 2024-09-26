@@ -2,7 +2,6 @@
 import { useState } from "react"
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Nunito_Sans, Edu_VIC_WA_NT_Beginner } from 'next/font/google';
 import './fonts/fonts.css'; // Asegúrate de que la ruta sea correcta
 import ActionButtonPlay from "@/components/ActionButtonPlay/ActionButtonPlay";
 
@@ -19,12 +18,6 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const edu_sans_int = Edu_VIC_WA_NT_Beginner({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-edu_sans_int",
-  weight: ["600", "700"],
-});
 
 const distantStroke = localFont({
   src: "./fonts/Distant_Stroke.otf",
