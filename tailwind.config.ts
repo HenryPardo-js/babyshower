@@ -19,6 +19,7 @@ const config: Config = {
         'code': ['Codec-Cold-Thin-trial', 'sans-serif'],
         'asper': ['Aspergit Light', 'sans-serif'],
         'hachi': ['HachiMaruPop-Regular', 'sans-serif'],
+        'brother': ['Brotherhood_Script', 'sans-serif'],
       },
     },
   },
