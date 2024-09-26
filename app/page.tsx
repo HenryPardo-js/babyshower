@@ -16,6 +16,7 @@ export default function Home() {
                   <span className="text-[#B78256] font-hachi text-3xl">{`SÁBADO`}</span>
                   <div className="h-6 w-px bg-[#B78256]"></div>
                   <span className="text-[#B78256] font-hachi text-3xl">{`05 Oct 15:00`}</span>
+                  <span className="text-[#B78256] font-hachi text-3xl">{`05 Oct 15:00`}</span>
                 </div>
               </div>
             </div>
