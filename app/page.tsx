@@ -1,13 +1,15 @@
 "use client"
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
-import { useParams, useSearchParams } from "next/navigation"
+import { useSearchParams } from "next/navigation"
 import Image from "next/image";
 import CountDown from "@/components/CountDown/CountDown";
 
 export default function Home() {
-  const params = useSearchParams();
-  const user = params.get('u');
+  // const params = useSearchParams();
+  // const user = params.get('u');
+  const searchParams = useSearchParams();
+  const paramValue = searchParams.get('u');
 
   function capitalizeFirstLetter(str: string): string {
     if (!str) return str;
@@ -176,7 +178,7 @@ export default function Home() {
             <div className="flex flex-col gap-4 w-full">
               <div className="flex flex-col gap-0 items-center">
                 <span className="text-[#2a2b2a] font-fredoka sm:text-xl text-lg text-center ">
-                  Hola {capitalizeFirstLetter(user || '')}! te invitamos a celebrar con nosotros el
+                  Hola {capitalizeFirstLetter(paramValue || '')}! te invitamos a celebrar con nosotros el
                 </span>
                 <h1 className="text-[#628cca] font-distant sm:text-9xl text-7xl animate-fade-up animate-duration-1000 animate-delay-500">
                   Baby Shower
