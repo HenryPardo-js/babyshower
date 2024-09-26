@@ -38,7 +38,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="antialiased relative">
+      <body className="antialiased relative bg-[url('/bg/bg1.png')] bg-cover bg-center min-h-screen">
         {children}
         <ActionButtonPlay />
       </body>
