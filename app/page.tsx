@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 import { useParams, useSearchParams } from "next/navigation"
 import Image from "next/image";
@@ -109,6 +109,54 @@ export default function Home() {
 
   };
 
+  const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleViewMaps = (latitude: string, longitude: string) => {
+    try {
+      const url = (latitude !== '' && longitude !== '') ? `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=-3.3225931563607256,-79.81192968225473` : `https://www.google.com/maps/dir/?api=1&destination=-3.3225931563607256,-79.81192968225473`;
+
+      window.open(url, '_blank'); // _blank abre en nueva pestaña
+    } catch (error) {
+
+    }
+  }
+
+
+  useEffect(() => {
+    // Verifica si la API de Geolocalización está disponible
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          // Almacena las coordenadas en el estado
+          setLocation({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          });
+        },
+        (error) => {
+          // Maneja los errores de geolocalización
+          switch (error.code) {
+            case error.PERMISSION_DENIED:
+              setError("Permiso denegado");
+              break;
+            case error.POSITION_UNAVAILABLE:
+              setError("Posición no disponible");
+              break;
+            case error.TIMEOUT:
+              setError("La solicitud ha caducado");
+              break;
+            default:
+              setError("Ocurrió un error al obtener la ubicación");
+              break;
+          }
+        }
+      );
+    } else {
+      setError("La geolocalización no es compatible con este navegador");
+    }
+  }, []);
+
 
 
   useEffect(() => {
@@ -153,7 +201,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-1 sm:col-span-2">
-            <div className="grid sm:grid-cols-3 grid-cols-1 p-10  gap-4" >
+            <div className="grid sm:grid-cols-3 grid-cols-1 sm:p-10 p-0  gap-4" >
               <div className="w-full sm:w-2/3">
                 <div className=" flex flex-col gap-2 border-dotted border-[#B78256] border-2  rounded-lg  bg-opacity-5  backdrop-blur-md before:absolute before:inset-0 before:bg-white/20 before:backdrop-blur-lg before:rounded-lg " >
                   <img src="/2.jpeg" alt="img1" className="w-full sm:w-full h-auto shadow-md rounded-t-lg animate-jump animate-duration-2000 animate-delay-500" />
@@ -166,8 +214,13 @@ export default function Home() {
               <div className="flex justify-center items-center">
                 <CountDown />
               </div>
-              <div>
-                ubicacion
+              <div className="flex flex-col gap-4  border-dotted border-[#B78256] border-2 bg-white  rounded-lg  bg-opacity-15 sm:px-0 sm:py-0 py-5  " >
+                <span className="text-[#2a2b2a] font-fredoka text-2xl sm:text-xl text-center" >¿Dónde va a ser? 🤔</span>
+                <span className="text-[#2a2b2a] font-fredoka text-2xl sm:text-xl text-center" >{`Dirección `}🪧 </span>
+                <span className="text-[#2a2b2a] font-fredoka text-xl sm:text-xl text-center" >David Carmona entre Rafael Flores y Municipalidad</span>
+                <button onClick={() => handleViewMaps(location?.latitude.toString() || '', location?.longitude.toString() || '')} className="flex justify-center px-10 py-2 rounded-lg bg-[#EF763E] text-white font-hachi text-center text-xl mx-5 " >
+                  Ver ubicación ahora!
+                </button>
               </div>
             </div>
           </div>
