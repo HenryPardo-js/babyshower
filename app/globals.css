@@ -43,3 +43,10 @@ body {
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .backdrop-blur-md {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
